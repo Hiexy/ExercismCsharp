@@ -10,7 +10,7 @@ static class LogLine
 	public static string Message(string logLine)
 	{
 		var logLineArray = logLine.Split(':');
-		if (logLineArray.Length > 1)
+		if (logLineArray.Length >= 2)
 		{
 			return logLineArray[1].Trim();
 		}
@@ -25,7 +25,7 @@ static class LogLine
 	public static string LogLevel(string logLine)
 	{
 		var logLineArray = logLine.Split(':');
-		if (logLineArray.Length > 1)
+		if (logLineArray.Length >= 2)
 		{
 			return logLineArray[0].Replace("[", string.Empty).Replace("]", string.Empty).ToLower();
 		}
@@ -41,7 +41,7 @@ static class LogLine
 		var logLineArray = logLine.Split(':');
         string message = null;
         string logLevel = null;
-        if (logLineArray.Length > 1)
+        if (logLineArray.Length >= 2)
 		{
 			message = logLineArray[1].Trim();
 		    logLevel = logLineArray[0].Replace("[", string.Empty).Replace("]", string.Empty).ToLower();
