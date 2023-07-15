@@ -26,11 +26,9 @@ public static class LogAnalysis
 	/// <returns>substringBetween</returns>
 	public static string SubstringBetween(this string str, string startStr, string endStr)
 	{
-		int startingIndex = str.IndexOf(startStr) + startStr.Length;
-		int endingIndex = str.IndexOf(endStr) - startingIndex;
-
-		return str.Substring(startingIndex, endingIndex);
-
+		var updatedString = str.SubstringAfter(startStr);
+		int endingIndex = updatedString.IndexOf(endStr);
+		return updatedString.Substring(0, endingIndex);
 	}
 
 	/// <summary>
