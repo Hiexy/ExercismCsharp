@@ -10,11 +10,7 @@ public static class LogAnalysis
 	/// <param name="str"></param>
 	/// <param name="delimiter"></param>
 	/// <returns>substringAfter</returns>
-	public static string SubstringAfter(this string str, string delimiter)
-	{
-		int startingIndex = str.IndexOf(delimiter) + delimiter.Length;
-		return str.Substring(startingIndex);
-	}
+	public static string SubstringAfter(this string str, string delimiter) => str.Substring(str.IndexOf(delimiter) + delimiter.Length);
 
 	/// <summary>
 	/// Returns the substring between start
@@ -27,8 +23,7 @@ public static class LogAnalysis
 	public static string SubstringBetween(this string str, string startStr, string endStr)
 	{
 		var updatedString = str.SubstringAfter(startStr);
-		int endingIndex = updatedString.IndexOf(endStr);
-		return updatedString.Substring(0, endingIndex);
+		return updatedString.Substring(0, updatedString.IndexOf(endStr));
 	}
 
 	/// <summary>
