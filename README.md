@@ -11,3 +11,4 @@ This repo will be updated while going through the track.
 - [Annalyn's Infiltration](https://exercism.org/tracks/csharp/exercises/annalyns-infiltration)
 - [Log Levels](https://exercism.org/tracks/csharp/exercises/log-levels)
 - [Log Analysis](https://exercism.org/tracks/csharp/exercises/log-analysis)
+- [Phone Number Analysis](https://exercism.org/tracks/csharp/exercises/phone-number-analysis)
