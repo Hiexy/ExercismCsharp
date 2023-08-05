@@ -7,8 +7,8 @@ public static class PythagoreanTriplet
     {
         int midPoint, l, r, c;
         for(int i = 1; i < sum / 3; ++i) {
-            l = i;
-            r = sum;
+            l = i + 1;
+            r = sum / 2;
             while (l <= r) {
                 midPoint = (int) (l + r) / 2; 
                 c = sum - (i + midPoint);
