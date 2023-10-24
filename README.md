@@ -15,3 +15,4 @@ This repo will be updated while going through the track.
 - [Cars, Assemble!](https://exercism.org/tracks/csharp/exercises/cars-assemble)
 - [Bob](https://exercism.org/tracks/csharp/exercises/bob)
 - [Leap](https://exercism.org/tracks/csharp/exercises/leap)
+- [Difference of Squares](https://exercism.org/tracks/csharp/exercises/difference-of-squares)
