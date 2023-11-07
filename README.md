@@ -16,3 +16,5 @@ This repo will be updated while going through the track.
 - [Bob](https://exercism.org/tracks/csharp/exercises/bob)
 - [Leap](https://exercism.org/tracks/csharp/exercises/leap)
 - [Difference of Squares](https://exercism.org/tracks/csharp/exercises/difference-of-squares)
+- [Saddle Points](https://exercism.org/tracks/csharp/exercises/saddle-points)
+- [Interest is Interesting](https://exercism.org/tracks/csharp/exercises/interest-is-interesting)
