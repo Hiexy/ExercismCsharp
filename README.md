@@ -20,3 +20,4 @@ This repo will be updated while going through the track.
 - [Interest is Interesting](https://exercism.org/tracks/csharp/exercises/interest-is-interesting)
 - [Roman Numerals](https://exercism.org/tracks/csharp/exercises/roman-numerals)
 - [Darts](https://exercism.org/tracks/csharp/exercises/darts)
+- [Triangle](https://exercism.org/tracks/csharp/exercises/triangle)
