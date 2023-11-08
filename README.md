@@ -22,3 +22,4 @@ This repo will be updated while going through the track.
 - [Darts](https://exercism.org/tracks/csharp/exercises/darts)
 - [Triangle](https://exercism.org/tracks/csharp/exercises/triangle)
 - [Tim from Marketing](https://exercism.org/tracks/csharp/exercises/tim-from-marketing)
+- [Elon's Toys](https://exercism.org/tracks/csharp/exercises/elons-toys)
