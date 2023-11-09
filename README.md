@@ -25,3 +25,4 @@ This repo will be updated while going through the track.
 - [Elon's Toys](https://exercism.org/tracks/csharp/exercises/elons-toys)
 - [Roll the Die!](https://exercism.org/tracks/csharp/exercises/roll-the-die)
 - [Diffie-Hellman](https://exercism.org/tracks/csharp/exercises/diffie-hellman)
+- [Booking up for Beauty](https://exercism.org/tracks/csharp/exercises/booking-up-for-beauty)
