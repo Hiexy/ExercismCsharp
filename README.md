@@ -24,3 +24,4 @@ This repo will be updated while going through the track.
 - [Tim from Marketing](https://exercism.org/tracks/csharp/exercises/tim-from-marketing)
 - [Elon's Toys](https://exercism.org/tracks/csharp/exercises/elons-toys)
 - [Roll the Die!](https://exercism.org/tracks/csharp/exercises/roll-the-die)
+- [Diffie-Hellman](https://exercism.org/tracks/csharp/exercises/diffie-hellman)
