@@ -21,70 +21,42 @@ public class Meetup
         this._year = year;
     }
 
-    public DateTime Day(DayOfWeek dayOfWeek, Schedule schedule)
+    /// <summary>
+    /// Finds the first occurrence of a specific day of the week within a given range of days in the current month and year.
+    /// </summary>
+    /// <param name="dayOfWeek">The day of the week to find.</param>
+    /// <param name="start">The start day of the range.</param>
+    /// <param name="end">The end day of the range.</param>
+    /// <returns>A DateTime representing the first occurrence of the specified day of the week within the range, or DateTime.MinValue if not found.</returns>
+    private DateTime FindDay(DayOfWeek dayOfWeek, int start, int end)
     {
         DateTime result = DateTime.MinValue;
 
-        if (schedule == Schedule.First) {
-            for (var i = 1; i <= 7; i++) {
-                var date = new DateTime(this._year, this._month, i);
-                if (date.DayOfWeek == dayOfWeek) {
-                    result = date;
-                    break;
-                }
-            }
-        }
-
-        if (schedule == Schedule.Second) {
-            for (var i = 8; i <= 14; i++) {
-                var date = new DateTime(this._year, this._month, i);
-                if (date.DayOfWeek == dayOfWeek) {
-                    result = date;
-                    break;
-                }
-            }
-        }
-
-        if (schedule == Schedule.Third) {
-            for (var i = 15; i <= 21; i++) {
-                var date = new DateTime(this._year, this._month, i);
-                if (date.DayOfWeek == dayOfWeek) {
-                    result = date;
-                    break;
-                }
-            }
-        }
-
-        if (schedule == Schedule.Fourth) {
-            for (var i = 22; i <= 28; i++) {
-                var date = new DateTime(this._year, this._month, i);
-                if (date.DayOfWeek == dayOfWeek) {
-                    result = date;
-                    break;
-                }
-            }
-        }
-
-        if (schedule == Schedule.Last) {
-            for (var i = DateTime.DaysInMonth(this._year, this._month); i >= 1; i--) {
-                var date = new DateTime(this._year, this._month, i);
-                if (date.DayOfWeek == dayOfWeek) {
-                    result = date;
-                    break;
-                }
-            }
-        }
-
-        if (schedule == Schedule.Teenth) {
-            for (var i = 13; i <= 19; i++) {
-                var date = new DateTime(this._year, this._month, i);
-                if (date.DayOfWeek == dayOfWeek) {
-                    result = date;
-                    break;
-                }
+        for (var i = start; i <= end; i++) {
+            var date = new DateTime(this._year, this._month, i);
+            if (date.DayOfWeek == dayOfWeek) {
+                result = date;
+                break;
             }
         }
 
         return result;
     }
+
+    /// <summary>
+    /// Finds the date of a specific day of the week according to a given schedule in the current month and year.
+    /// </summary>
+    /// <param name="dayOfWeek">The day of the week to find.</param>
+    /// <param name="schedule">The schedule (e.g., first, second, teenth, etc.) to use when finding the day.</param>
+    /// <returns>A DateTime representing the date found according to the schedule, or throws an ArgumentException if the schedule is invalid.</returns>
+    public DateTime Day(DayOfWeek dayOfWeek, Schedule schedule) => schedule switch
+    {
+        Schedule.Teenth => FindDay(dayOfWeek, 13, 19),
+        Schedule.First => FindDay(dayOfWeek, 1, 7),
+        Schedule.Second => FindDay(dayOfWeek, 8, 14),
+        Schedule.Third => FindDay(dayOfWeek, 15, 21),
+        Schedule.Fourth => FindDay(dayOfWeek, 22, 28),
+        Schedule.Last => FindDay(dayOfWeek, DateTime.DaysInMonth(_year, _month) - 6, DateTime.DaysInMonth(_year, _month)),
+        _ => throw new ArgumentException()
+    };
 }
