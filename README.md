@@ -27,3 +27,5 @@ This repo will be updated while going through the track.
 - [Diffie-Hellman](https://exercism.org/tracks/csharp/exercises/diffie-hellman)
 - [Booking up for Beauty](https://exercism.org/tracks/csharp/exercises/booking-up-for-beauty)
 - [Gigasecond](https://exercism.org/tracks/csharp/exercises/gigasecond)
+- [Meetup](https://exercism.org/tracks/csharp/exercises/meetup)
+- [Need for Speed](https://exercism.org/tracks/csharp/exercises/need-for-speed)
