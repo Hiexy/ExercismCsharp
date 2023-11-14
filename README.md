@@ -29,3 +29,4 @@ This repo will be updated while going through the track.
 - [Gigasecond](https://exercism.org/tracks/csharp/exercises/gigasecond)
 - [Meetup](https://exercism.org/tracks/csharp/exercises/meetup)
 - [Need for Speed](https://exercism.org/tracks/csharp/exercises/need-for-speed)
+- [Bird Watcher](https://exercism.org/tracks/csharp/exercises/bird-watcher)
