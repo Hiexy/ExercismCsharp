@@ -16,21 +16,17 @@ class RemoteControlCar
         this._batteryLife = 100;
     }
 
-    public bool BatteryDrained() => this._batteryLife <= 0;
+    public bool BatteryDrained() => this._batteryLife < this._batteryDrain;
 
     public int DistanceDriven() => this._distanceDriven;
 
     public void Drive()
     {
-        if (this._batteryLife - this._batteryDrain >= 0)
+        if (!BatteryDrained() && this._batteryLife >= this._batteryDrain)
         {
             this._distanceDriven += this._speed;
-            this._batteryLife -= this._batteryDrain;
         }
-        if (this._batteryLife - this._batteryDrain < 0)
-        {
-            this._batteryLife = 0;
-        }
+        this._batteryLife -= this._batteryDrain;
     }
 
     public static RemoteControlCar Nitro() => new RemoteControlCar(50, 4);
