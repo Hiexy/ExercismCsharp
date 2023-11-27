@@ -7,7 +7,7 @@ using System.Collections.Generic;
 public class Anagram
 {
     private readonly string _baseWord;
-    private const int NUMBER_OF_ENGLISH_LETTERS;
+    private const int NUMBER_OF_ENGLISH_LETTERS = 26;
     public Anagram(string baseWord)
     {
         this._baseWord = baseWord.ToLower();
